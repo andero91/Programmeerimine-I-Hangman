@@ -84,7 +84,7 @@ class Dice10 {
     }
 
     // Juhuslik arv vahemikus 0-9
-    // Kui 0, siis 10
+    // Kui 0, siis 100
     // Tulemus korrutatakse 10-ga
     roll() {
         let d10_random = 0;
@@ -187,3 +187,16 @@ function katse() {
 }
 
 console.log("Kasutajal on " + elud + " elu.");
+
+// Loop, mis avab järjest avamata tähti
+let j = 0;
+while (j < sõna.length) {
+    // Kui konkreetsel indeksil on juba täht avatud, siis võetakse järgmine indeks
+    if (juhuslikud_arvud.includes(j)) {
+        j++;
+    } else {
+        kohatäidetega_sõna = kohatäidetega_sõna.replaceAt(j, sõna[j]);
+        console.log(kohatäidetega_sõna);
+        j++;
+    }
+}
